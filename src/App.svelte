@@ -87,6 +87,10 @@
 		border: 1px solid #ff6a95;
 	}
 
+	textarea::placeholder {
+		text-align: right;
+	}
+	
 	@media only screen and (max-width: 40em) {
 		main {
 			margin-left: 0.5rem;
