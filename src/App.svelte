@@ -6,7 +6,7 @@
 	let text1 = ''
 	let text2 = ''
 
-	$: similarityPercentage = similarity * 100
+	$: similarityPercentage = (similarity * 100).toFixed(2)
 </script>
 
 <main>
