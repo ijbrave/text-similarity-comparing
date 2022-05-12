@@ -7,6 +7,10 @@
 	let text2 = ''
 
 	$: similarityPercentage = (similarity * 100).toFixed(2)
+
+	const calcSimilarity = () => {
+		similarity = stringSimilarity.compareTwoStrings(text1, text2)
+	}
 </script>
 
 <main>
@@ -17,9 +21,7 @@
 				dir="auto"
 				placeholder="متن اول"
 				bind:value={text1}
-				on:input={() => {
-					similarity = stringSimilarity.compareTwoStrings(text1, text2)
-				}}
+				on:input={() => calcSimilarity()}
 			/>
 		</div>
 		<div class="input-container">
@@ -27,9 +29,7 @@
 				dir="auto"
 				placeholder="متن دوم"
 				bind:value={text2}
-				on:input={() => {
-					similarity = stringSimilarity.compareTwoStrings(text1, text2)
-				}}
+				on:input={() => calcSimilarity()}
 			/>
 		</div>
 	</div>
