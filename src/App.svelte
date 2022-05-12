@@ -90,11 +90,19 @@
 	textarea::placeholder {
 		text-align: right;
 	}
-	
+
 	@media only screen and (max-width: 40em) {
 		main {
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
+			margin: 4rem 0.8rem;
+		}
+	}
+
+	@media only screen and (max-width: 30em) {
+		main {
+			margin: 2rem 0.5rem;
+		}
+		textarea {
+			height: 10rem;
 		}
 	}
 </style>
